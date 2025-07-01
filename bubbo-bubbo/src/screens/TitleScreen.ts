@@ -253,7 +253,7 @@ export class TitleScreen extends Container implements AppScreen {
 
     /** Add buttons to screen. */
     private _buildButtons() {
-         this._forkBtn = new PrimaryButton({
+        this._forkBtn = new PrimaryButton({
             text: i18n.t('forkGithub'),
             textStyle: {
                 fill: 0xe91e63,
@@ -276,7 +276,7 @@ export class TitleScreen extends Container implements AppScreen {
             },
         });
 
-        this._forkBtn.alpha = 0.0
+        this._forkBtn.alpha = 0.0;
 
         this._bottomAnimContainer.addChild(this._forkBtn);
 
