@@ -253,34 +253,6 @@ export class TitleScreen extends Container implements AppScreen {
 
     /** Add buttons to screen. */
     private _buildButtons() {
-        this._forkBtn = new PrimaryButton({
-            text: i18n.t('forkGithub'),
-            textStyle: {
-                fill: 0xe91e63,
-                fontFamily: 'Opensans Semibold',
-                fontWeight: 'bold',
-                align: 'center',
-                fontSize: 16,
-            },
-            buttonOptions: {
-                defaultView: 'pixi-btn-up',
-                pressedView: 'pixi-btn-down',
-                textOffset: {
-                    default: {
-                        y: -13,
-                    },
-                    pressed: {
-                        y: -8,
-                    },
-                },
-            },
-        });
-
-        this._forkBtn.onPress.connect(() => {
-            window.open(designConfig.forkMeURL, '_blank')?.focus();
-        });
-
-        this._bottomAnimContainer.addChild(this._forkBtn);
 
         this._audioBtn = new AudioButton();
         this._topAnimContainer.addChild(this._audioBtn);
