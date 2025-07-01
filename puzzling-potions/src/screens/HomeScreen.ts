@@ -30,10 +30,6 @@ export class HomeScreen extends Container {
     private dragon: Dragon;
     /** Button that leads to gameplay */
     private playButton: LargeButton;
-    /** Button that links to the Github project */
-    private githubButton: SmallButton;
-    /** Button that links to the PixiJS page */
-    private pixiButton: ImageButton;
     /** Button that opens the info panel */
     private infoButton: RippleButton;
     /** Button that opens the settings panel */
@@ -90,10 +86,6 @@ export class HomeScreen extends Container {
         this.base.y = height - 140;
         this.logo.x = width * 0.5;
         this.logo.y = height * 0.2;
-        this.githubButton.x = width - 50;
-        this.githubButton.y = height - 40;
-        this.pixiButton.x = 50;
-        this.pixiButton.y = height - 40;
         this.infoButton.x = 30;
         this.infoButton.y = 30;
         this.settingsButton.x = width - 30;
@@ -106,10 +98,8 @@ export class HomeScreen extends Container {
 
         // Reset visual state, hide things that will show up later
         this.playButton.hide(false);
-        this.pixiButton.hide(false);
         this.infoButton.hide(false);
         this.settingsButton.hide(false);
-        this.githubButton.hide(false);
         this.dragon.show(false);
         this.logo.show(false);
 
@@ -122,15 +112,11 @@ export class HomeScreen extends Container {
         this.interactiveChildren = true;
         // this.infoButton.show();
         await this.settingsButton.show();
-        this.pixiButton.show();
-        await this.githubButton.show();
     }
 
     /** Hide screen with animations */
     public async hide() {
         this.playButton.hide();
-        this.pixiButton.hide();
-        this.githubButton.hide();
         this.infoButton.hide();
         await waitFor(0.1);
         gsap.to(this.base.pivot, { y: -200, duration: 0.3, ease: 'back.in' });
