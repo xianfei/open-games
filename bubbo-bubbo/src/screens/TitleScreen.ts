@@ -253,7 +253,6 @@ export class TitleScreen extends Container implements AppScreen {
 
     /** Add buttons to screen. */
     private _buildButtons() {
-
         this._audioBtn = new AudioButton();
         this._topAnimContainer.addChild(this._audioBtn);
 
