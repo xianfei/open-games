@@ -8,8 +8,6 @@ import { registerCustomEase } from '../utils/animation';
 import { Logo } from '../ui/Logo';
 import { Dragon } from '../ui/Dragon';
 import { waitFor } from '../utils/asyncUtils';
-import { SmallButton } from '../ui/SmallButton';
-import { ImageButton } from '../ui/ImageButton';
 import { RippleButton } from '../ui/RippleButton';
 import { InfoPopup } from '../popups/InfoPopup';
 import { SettingsPopup } from '../popups/SettingsPopup';
